@@ -5,18 +5,18 @@ const mwr = require('./../../middlewares/auth');
 const router = express.Router();
 
 router.post('',
-            validator.massageValidator(),
-            controller.validate,
+    validator.massageValidator(),
+    controller.validate,
     controller.saveMassageController);
 
     
 router.get('/chats',
-        mwr.isLoggined,
-        controller.getChats)
+    mwr.isLoggined,
+    controller.getChats)
         
 router.get('/:with',
-validator.massageUsersValidator(),
-controller.validate,
-mwr.isLoggined,
+    validator.massageUsersValidator(),
+    controller.validate,
+    mwr.isLoggined,
     controller.getMassegesController);
 module.exports = router;

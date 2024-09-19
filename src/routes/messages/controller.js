@@ -35,7 +35,6 @@ module.exports = new (class extends Controller{
         });    
     }
     getChats(req,res){
-        console.log('1111111111111111111111111111111111111111111111');
         const user_id = req.user.id;
         const token = jwt.sign(user_id,'asdkiojsefsdjksdjkfds');
         console.log(token);
